@@ -1,0 +1,10 @@
+./t 6Cb1-intprint
+#./t 6Cb2-if
+#./t 6Cb3-intops
+#./t 6Ba1-sets
+#./t 6Ba2-comparisons
+#./t 6Ba3-bools
+#./t 6Ab1-lstops
+#./t 6Ab2-indexing
+#./t 6Ab3-comps
+#./t 6Ab4-builtin
