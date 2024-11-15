@@ -104,13 +104,17 @@ public class HLEval implements HLVisitor{
     return defaultVisit(node, data);
   }
   public Object visit(ASTsum node, Object data) throws Exception{
-    return defaultVisit(node, data);
+    int result = 0;
+    for(int i = 0; i < node.jjtGetNumChildren(); i++){
+       result += ((Integer) node.jjtGetChild(i).jjtAccept(this,null)).intValue();
+    }
+    return result;
   }
   public Object visit(ASTneg node, Object data) throws Exception{
-    return defaultVisit(node, data);
+  	return -1 * (Integer)node.jjtGetChild(0).jjtAccept(this, null);
   }
   public Object visit(ASTpos node, Object data) throws Exception{
-    return defaultVisit(node, data);
+	return (Integer)node.jjtGetChild(0).jjtAccept(this, null);
   }
   public Object visit(ASTmul node, Object data) throws Exception{
     return defaultVisit(node, data);
@@ -143,7 +147,6 @@ public class HLEval implements HLVisitor{
     return defaultVisit(node, data);
   }
   public Object visit(ASTtypebool node, Object data) throws Exception{
-    	int a = 1 + 4;
 	  return defaultVisit(node, data);
   }
   public Object visit(ASTnumber node, Object data) throws Exception{
