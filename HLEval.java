@@ -147,7 +147,6 @@ public class HLEval implements HLVisitor{
 	  return defaultVisit(node, data);
   }
   public Object visit(ASTnumber node, Object data) throws Exception{
-    // return defaultVisit(node, data);
     	return node.jjtGetValue();
   }
   public Object visit(ASTstring node, Object data) throws Exception{
